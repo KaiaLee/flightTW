@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Hi there 👋
 
 <!--
@@ -99,3 +100,7 @@ puts markdown.to_html
 - [ ] \(Optional) Open a followup issue
 
 -->
+=======
+# flightTW
+Rproject_Predicting flight delays
+>>>>>>> a8dfbdf2c059c03b6a4a5617d672177b88a2f31d
