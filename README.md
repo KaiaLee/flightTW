@@ -1,106 +1,44 @@
-<<<<<<< HEAD
-## Hi there 👋
+## 專題練習
+在為期一個半月的R語言課程之後，希望以這個專題做課程學習複習。目標為：訓練自己擁有獨自完成專題的能力。
+身為初學者和深耕研究此領域已久的人完全無法比較，因此比起預測準確度等結果，對我來說這次專題練習學習到的東西更為重要。為自己安排的訓練步驟分別為查找資料、閱讀資料、應用課程所學和探索專案完成所需相關技能。
 
-<!--
-**KaiaLee/KaiaLee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
-- I am passionate about learning new things.
-- I am eager to embrace new challenges.
-- I am currently seeking opportunities where I can apply my skills and grow professionally.
-
-### Current Project:
--🔭 I am actively working on a flight delay prediction project. This involves utilizing data mining and deep learning techniques to analyze and forecast flight delays.
-1. Methodologies & Tools:
-     - Data Mining Techniques: Applying various methods to extract valuable insights from complex datasets.
-     - Deep Learning Models: Developing and optimizing models for accurate flight delay predictions.
-
-1. Key Competencies:
-     - Algorithms & Model Development: Expertise in designing, implementing, and improving predictive models.
-     - Problem-Solving: Strong analytical skills with a focus on innovative solutions.
-     - Project Management: Effective time management and organizational skills to ensure timely and successful project execution.
-
-
-### Learning and Skills Development:
--🌱 I am currently expanding my knowledge in data mining and deep learning. I am particularly interested in applying these skills to real-world problems and improving predictive accuracy.
-
-### Contact Information:
--📫 Feel free to reach me at: a0937352072@gmail.com
-
-
-### My top languages and tools
 <details>
-<summary>My top languages and tools</summary>
+<summary>學習歷程小小記錄</summary>
+     
+### 查找資料
+接受同學提議，以台灣交通部[「運輸資料流通服務平臺」(Transport Data eXchange ,TDX)](https://tdx.transportdata.tw/)飛機航班公開資料發想題目。接著在 kaggle 上發現一[航班延遲時間預測教程](https://www.kaggle.com/code/fabiendaniel/predicting-flight-delays-tutorial/)，所以決定將題目訂為：抵達機場不同對航班延遲時間的影響。
+- 取得 2024/08/10 ~ 2024/08/20 資料，其中包含 2024/08/12 ~ 2024/08/19 完整航班資料。
+- 以 2024/08/12 ~ 2024/08/18 星期一到日為期一周的資料作為基礎。
+
+### 閱讀資料
+由於課堂並無學到時間序列相關內容，因此在教程閱讀和理解上速度較慢，詢問老師後反而在製作過程出現更多疑問和混亂的方向。
+- 由[航班延遲時間預測教程](https://www.kaggle.com/code/fabiendaniel/predicting-flight-delays-tutorial/)目錄決定做抵達機場不同對延誤時間的影響預測，因課堂有教分類模型，最初想應用取得的台灣班機資料做班機是否延遲的分類模型預測，使用caret分組進行模型訓練測試。
+- 過程中老師強烈建議製作時間序列模型預測延遲分鐘數。因此詳讀教程後，理解為以單一特徵的 Ridge 多項式回歸模型來做時間序列模型與預測航班延遲分鐘數，並進行作業，但對當中的過程，包含時間帶入的方式和為什麼只用單一特徵感到疑問。[查看 `flightTW.ipynb`](flightTW.ipynb)
+- 向老師請教 Ridge 多項式回歸模型未果。受限資料只包含一周範圍，無法進行年、季、月、周的觀察，老師給予將時間區段切為以一小時為分割的時段指示，並希望我們觀察一天中各時段班機延誤時間是否有差異。
+- 上網搜尋時間序列預測常見的模型選擇和步驟後，將資料切分為以小時為區塊，觀察一天中班機延誤時間是否有差異後，進行模型製作並評估。[查看 `flightTW_ARIMA_RNN_LSTM.ipynb`](flightTW_ARIMA_RNN_LSTM.ipynb)
+
+### 應用課程所學
+- R語言資料導入、清理、視覺化分析[查看 `flightTW.R`](flightTW.R)
+
+### 專案製作自學項目
+- kaggle：題目發想、探索相關案例
+- github：探索版本控管方式，初步了解寫代碼一定要知道的基礎知識
+- colab：更快速執行機器學習步驟
+- plotly：進階繪圖與互動式視覺化
+</details>
+
+## 題目
+從台灣機場出發班機的延遲時間預測
+
+## 結論
+目前可知LSTM為四模型中最佳模型
+
+## 調整
+特徵提取優化
+分層交叉驗證
+過擬合
 
 | Rank | Languages |
 |-----:|-----------|
-|     1| R|
-|     2| Python    |
-
-- [x] github intro
-- [x] power BI
-- [x] mysql exploring
-- [ ] colab
-- [ ] kaggle
-- [ ] plotly
-</details>
-
-
-
-
-
-
-
-
-
-
-<!--
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images
-
-100. First list item
-     - First nested list item
-       - Second nested list item
-      
-```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-```
-
-
-
-````
-```
-Look! You can see my backticks.
-```
-````
-
-
-
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
-- [ ] \(Optional) Open a followup issue
-
--->
-=======
-# flightTW
-Rproject_Predicting flight delays
->>>>>>> a8dfbdf2c059c03b6a4a5617d672177b88a2f31d
+|     1| Python|
+|     2| R   |
